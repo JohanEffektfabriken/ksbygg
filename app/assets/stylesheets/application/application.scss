@@ -1,0 +1,27 @@
+html, body {
+  font-size: 100%;
+}
+
+// Callouts.
+.bs-callout {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+}
+
+.bs-callout-attention {
+  background-color: #f5f5f5;
+  border-left: 3px solid #d9edf7;
+}
+
+.bs-callout-warning {
+  background-color: #fcf8f2;
+  border-left: 3px solid #f0ad4e;
+}
+
+// Employee
+thead {
+  padding-top: 10px;
+  font-weight: bold;
+  background: #FEE180;
+}

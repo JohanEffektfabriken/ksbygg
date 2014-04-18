@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ksbygg - Hem</title>
+  <%= render 'layouts/partials/meta' %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <%= render 'layouts/partials/shim' %>
+</head>
+<body>
+
+<div id="all-content">
+
+  <%= render 'layouts/partials/navbar' %>
+
+  <div id="main-content" class="container">
+    <main role="main" class="pull-left col-md-8">
+      <%= yield %>
+    </main>
+  </div>
+
+  <%= render 'layouts/partials/footer' %>
+
+</div>
+
+</body>
+</html>

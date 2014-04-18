@@ -1,0 +1,7 @@
+/*
+ * Manifest file.
+ *
+ *= require bootstrap.min
+ *= require_tree ./shared/
+ *= require_tree ./home/
+ */

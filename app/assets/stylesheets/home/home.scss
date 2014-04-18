@@ -1,0 +1,31 @@
+@import 'shared/general';
+
+// Mixins
+@mixin hero-content($top-margin) {
+  background-color: #FFF;
+  margin: 0;
+  line-height: 30px;
+}
+
+html, body {
+  letter-spacing: 1px;
+}
+
+// Home-screen
+.hero-content {
+  @include hero-content(0);
+}
+
+@media (min-width: 768px){
+  .hero-content {
+    @include hero-content(100px);
+  }
+}
+
+section.carousel-section {
+  border-bottom: 5px solid $bgHighlight;
+
+  .carousel-inner {
+    max-height: 600px;
+  }
+}

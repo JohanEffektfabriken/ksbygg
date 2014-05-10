@@ -1,33 +1,54 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
-gem 'sqlite3'
-gem 'uglifier'
-gem 'therubyracer'
-
-gem 'sass-rails'
-gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Common
+gem 'therubyracer',  platforms: :ruby
 gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
+gem 'rails'
 
+# Javascript
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'execjs'
+gem 'gon'
+
+# Stylesheets
+gem 'sass-rails'
+gem 'sass-rails-bootstrap'
+
+# Authentication model and roles
+gem 'cancancan'
+gem 'devise'
+
+# Errors
+gem 'binding_of_caller'
+gem 'better_errors'
+
+# Pagination.
+gem 'kaminari'
+gem 'kaminari-bootstrap'
+
+# Forms
+gem 'simple_form'
+gem 'country_select'
+gem 'nested_form_fields'
+
+# Extra, environment specifics
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt'
+group :production do
+  gem 'pg'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development do
+  gem 'sqlite3'
+  gem 'spring'
+  gem 'annotate'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+#Use debugger
+gem 'debugger', group: [:development, :test]

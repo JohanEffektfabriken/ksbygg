@@ -17,9 +17,14 @@
   <%= render 'layouts/partials/navbar' %>
 
   <div id="main-content" class="container">
-    <main role="main" class="pull-left col-md-8">
-      <%= yield %>
-    </main>
+    <div class="row">
+      <main role="main" class="pull-left col-md-8">
+        <!--<p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>-->
+
+        <%= yield %>
+      </main>
+    </div>
   </div>
 
   <%= render 'layouts/partials/footer' %>

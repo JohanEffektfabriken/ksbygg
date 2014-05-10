@@ -38,7 +38,7 @@ html, body {
     }
   }
 
-  footer {
+  footer#page-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -50,4 +50,18 @@ html, body {
 
 .navbar-default {
   border-bottom: 5px solid $bgHighlight;
+}
+
+// Dropdown sing-in form.
+#navbar-signin-dropdown {
+  width: 255px;
+
+  .input-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .input-group-padding {
+    margin-top: 10px;
+  }
 }

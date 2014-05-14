@@ -19,7 +19,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: db_ksbygg
   pool: 5
-  timeout: 5000
+  username: postgres
+  password: postgres
+  username: admin
+  password: Uq4c4]G<#F~3<@C

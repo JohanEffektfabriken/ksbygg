@@ -1,6 +1,10 @@
 KsbyggWeb::Application.routes.draw do
   root 'home#home'
 
+  namespace :admin do
+    resources :dashboard, only: [:index]
+  end
+
   devise_for :users
 
   get 'home', to: 'home#home'

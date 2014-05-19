@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <title>Ksbygg - Admin</title>
+  <%= render 'layouts/partials/meta' %>
+
+  <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <%= render 'layouts/partials/shim' %>
+</head>
+<body>
+    <!--<aside role="complementary" class="col-sm-2 admin-asides">
+        <h1>Test</h1>
+    </aside>
+    <main role="main" class="col-sm-2">
+      <#%= yield %>
+    </main>-->
+
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <%= render 'layouts/partials/admin_navbar' %>
+      </div>
+
+      <div id="page-content-wrapper">
+        <div class="page-content inset">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <% if user_signed_in? %>
+    <div id="login-widget">
+      <%= current_user.email %> | <%= link_to 'Logga ut', destroy_user_session_path, method: :delete %>
+    </div>
+<% end %>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h1>Galleri</h1>
+</div>
+
+<% @photos.each do |photo|%>
+    <div class="col-sm-4">
+      <%= image_tag photo.photo(:medium), class: 'img-responsive responsive' %>
+    </div>
+<% end %>

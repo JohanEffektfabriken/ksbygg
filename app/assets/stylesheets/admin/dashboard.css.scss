@@ -15,15 +15,6 @@
     transition: all 0.4s ease 0s;
 }
 
-#sidebar-wrapper .logo
-{
-    margin-top:15px;
-    margin-bottom:15px;
-    padding-left:40px;
-    padding-right:40px;
-    height:135px;
-}
-
 #page-content-wrapper {
     width: 100%;
 }
@@ -125,8 +116,7 @@
 
 }
 
-#login-widget
-{
+#login-widget {
   position:absolute;
   top:0;
   right:15px;
@@ -136,6 +126,15 @@
   border-bottom-right-radius: 4px;
   padding:5px 20px;
 }
+
+#company-logo {
+  font-size: 27px;
+  color: #FFFFFF;
+  margin-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 
 /*
  FIXME: Convert to SASS.

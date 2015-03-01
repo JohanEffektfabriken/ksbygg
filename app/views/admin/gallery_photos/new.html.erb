@@ -1,0 +1,55 @@
+<div class="container pull-left">
+  <div class="page-header">
+    <h1>Galleri bilder</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>
+        Nedan kan du lägga till bilder till bildgalleriet. Alla bilder du lägger till här kommer att vara synliga på sidan
+        direkt efteråt så säkerställ bilden/bilderna du laddar upp är de du vill visa. Du kan tabort en bild när som helst
+        genom att trycka på tabort-knappen.
+      </p>
+    </div>
+  </div>
+
+  <%= simple_form_for [:admin, @photo], html: {multipart: true, id: 'new_upload' } do |f| %>
+      <div class="actions">
+
+        <span class="btn btn-success fileinput-button">
+            <i class="glyphicon glyphicon-plus"></i>
+            <span>Lägg till bilder...</span>
+            <%= f.file_field :photo, multiple: true, name: 'gallery_photo[photo]' %>
+        </span>
+
+        <button type="submit" class="btn btn-primary start">
+          <i class="glyphicon glyphicon-upload"></i>
+          <span>Börja uppladdningen</span>
+        </button>
+
+      </div>
+  <% end %>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= t('activerecord.attributes.gallery_photo.photo_file_name') %></th>
+      <th><%= t('activerecord.models.common.created_at') %></th>
+      <th><%= t('activerecord.models.common.updated_at') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @photos %>
+    </tbody>
+  </table>
+</div>
+
+<% # jquery upload template # %>
+<script id="template-upload" type="text/x-tmpl">
+<div class="upload">
+   {%=o.name%}
+   <div class="progress">
+       <div class="progress-bar bar" style="width: 0%"></div>
+   </div>
+</div>
+</script>

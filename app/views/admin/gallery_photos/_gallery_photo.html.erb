@@ -1,0 +1,6 @@
+<tr>
+  <td><%= image_tag gallery_photo.photo.url(:thumb), width: '40px' %></td>
+  <td><%= l gallery_photo.created_at, format: :short %></td>
+  <td><%= l gallery_photo.updated_at, format: :short %></td>
+  <td><%= admin_delete_button_for gallery_photo, 'Tabort' %></td>
+</tr>

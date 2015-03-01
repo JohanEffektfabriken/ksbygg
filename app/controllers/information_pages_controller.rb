@@ -10,4 +10,8 @@ class InformationPagesController < ApplicationController
 
   def projects
   end
+
+  def gallery
+    @photos = GalleryPhoto.all
+  end
 end

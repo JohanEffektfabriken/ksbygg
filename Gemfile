@@ -34,21 +34,22 @@ gem 'simple_form'
 gem 'country_select'
 gem 'nested_form_fields'
 
+# File uploads
+gem 'paperclip'
+gem 'jquery-fileupload-rails'
+
+# Database
+gem 'pg', group: [:staging, :production]
+
 # Extra, environment specifics
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :production do
-  gem 'pg'
-end
-
 group :development do
   gem 'sqlite3'
   gem 'spring'
   gem 'annotate'
+  gem 'debugger'
 end
-
-#Use debugger
-gem 'debugger', group: [:development, :test]

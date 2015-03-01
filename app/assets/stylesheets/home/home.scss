@@ -1,5 +1,7 @@
 @import 'shared/general';
 
+$translationY : -700px;
+
 // Mixins
 @mixin hero-content($top-margin) {
   background-color: #FFF;
@@ -27,5 +29,20 @@ section.carousel-section {
 
   .carousel-inner {
     max-height: 600px;
+
+    @media (min-width:1745px) {
+      img {
+        -ms-transform: translate(0, $translationY); /* IE 9 */
+        -webkit-transform: translate(0, $translationY); /* Chrome, Safari, Opera */
+        transform: translate(0, $translationY);
+      }
+    }
+
+  }
+
+  .carousel-caption {
+    top: 0;
+    bottom: auto;
   }
 }
+
